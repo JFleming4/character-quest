@@ -1,0 +1,19 @@
+<div *ngIf="selectedMonster">
+<h2>{{selectedMonster.name | uppercase}} Details</h2>
+<div><span>id: </span>{{selectedMonster.id}}</div>
+<div>
+  <label>name:
+    <input [(ngModel)]="selectedMonster.name" placeholder="name"/>
+  </label>
+</div>
+</div>
+
+<h2>My Monsters</h2>
+<ul class="monsters">
+  <li *ngFor="let monster of monsters"
+  [class.selected]="monster === selectedMonster"
+  (click)="onSelect(monster)">
+    <span class="badge">{{monster.id}}</span> {{monster.name}}
+  </li>
+</ul>
+
