@@ -1,8 +1,9 @@
+
 export class Monster {
     id: number;
     //Title Section
     name: string;
-    size: string;
+    size: IMonsterSize;
     type: string;
     alignment: string;
 
@@ -43,3 +44,6 @@ export interface IStatAbility
     title: string;
     description: string;
 }
+
+export const MonsterSizes = ["Tiny", "Small", "Medium", "Large", "Huge", "Gargantuan"];
+export type IMonsterSize = typeof MonsterSizes[number];

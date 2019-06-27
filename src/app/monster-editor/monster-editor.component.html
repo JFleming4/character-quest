@@ -1,0 +1,116 @@
+<div *ngIf="monster"> 
+  <mat-accordion multi="true">
+
+    <mat-expansion-panel>
+      <mat-expansion-panel-header>
+        <mat-panel-title>Title Block</mat-panel-title>
+      </mat-expansion-panel-header>
+      <mat-form-field>
+        <input matInput placeholder="Name"[(ngModel)]="monster.name">
+      </mat-form-field>
+
+      <mat-form-field>
+        <mat-select placeholder="Size" [(ngModel)]="monster.size">
+          <mat-option *ngFor="let size of sizes" [value]="size">
+            {{size}}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+
+      <mat-form-field>
+          <input matInput placeholder="Type"[(ngModel)]="monster.type">
+      </mat-form-field>
+     
+      <mat-form-field>
+          <input matInput placeholder="Alignment"[(ngModel)]="monster.alignment">
+      </mat-form-field>
+    </mat-expansion-panel>
+
+    <mat-expansion-panel>
+      <mat-expansion-panel-header>
+        <mat-panel-title>Combat Block</mat-panel-title>
+      </mat-expansion-panel-header>
+      <mat-form-field>
+        <input matInput placeholder="AC"[(ngModel)]="monster.ac" type="number">
+      </mat-form-field>
+
+      <mat-form-field>
+        <input matInput placeholder="Hit Point Average"[(ngModel)]="monster.hitPointAvg" type="number">
+      </mat-form-field>
+
+      <mat-form-field>
+        <input matInput placeholder="Hit Dice"[(ngModel)]="monster.hitDice">
+      </mat-form-field>
+      
+      <mat-form-field>
+        <input matInput placeholder="Speed"[(ngModel)]="monster.speed" type="number">
+      </mat-form-field>
+    </mat-expansion-panel>
+
+    <mat-expansion-panel>
+      <mat-expansion-panel-header>
+        <mat-panel-title>Ability Scores</mat-panel-title>
+      </mat-expansion-panel-header>
+      <mat-form-field>
+          <input matInput placeholder="Strength"[(ngModel)]="monster.str" type="number">
+      </mat-form-field>
+      
+      <mat-form-field>
+          <input matInput placeholder="Dexterity"[(ngModel)]="monster.dex" type="number">
+      </mat-form-field>
+      
+      <mat-form-field>
+          <input matInput placeholder="Constitution"[(ngModel)]="monster.con" type="number">
+      </mat-form-field>
+      
+      <mat-form-field>
+          <input matInput placeholder="Intelligence"[(ngModel)]="monster.int" type="number">
+      </mat-form-field>
+      
+      <mat-form-field>
+          <input matInput placeholder="Wisdom"[(ngModel)]="monster.wis" type="number">
+      </mat-form-field>
+      
+      <mat-form-field>
+          <input matInput placeholder="Charisma"[(ngModel)]="monster.cha" type="number">
+      </mat-form-field>
+    </mat-expansion-panel>
+    
+    <mat-expansion-panel>
+      <mat-expansion-panel-header>
+        <mat-panel-title>Attributes</mat-panel-title>
+      </mat-expansion-panel-header>
+      <mat-form-field>
+          <input matInput placeholder="Title">
+        </mat-form-field>
+    </mat-expansion-panel>
+
+    <mat-expansion-panel>
+      <mat-expansion-panel-header>
+        <mat-panel-title>Abilities</mat-panel-title>
+      </mat-expansion-panel-header>
+      <mat-form-field>
+          <input matInput placeholder="Title">
+        </mat-form-field>
+    </mat-expansion-panel>
+
+    <mat-expansion-panel>
+      <mat-expansion-panel-header>
+        <mat-panel-title>Actions</mat-panel-title>
+      </mat-expansion-panel-header>
+      <mat-form-field>
+          <input matInput placeholder="Title">
+        </mat-form-field>
+    </mat-expansion-panel>
+
+    <mat-expansion-panel>
+      <mat-expansion-panel-header>
+        <mat-panel-title>Legendary Actions</mat-panel-title>
+      </mat-expansion-panel-header>
+      <mat-form-field>
+          <input matInput placeholder="Title">
+        </mat-form-field>
+    </mat-expansion-panel>
+
+  </mat-accordion>
+</div>

@@ -1,14 +1,14 @@
 import { Monster } from './monster';
 
 export const MONSTERS: Monster[] = [
-    { id: 11, name: "Goblin", ac: 12, size: "medium", type: "humonoid", alignment: "choatic evil", hitPointAvg: 7, hitDice: "1d6 +2", speed: 30, str: 20, dex: 10, con: 10, int: 5, wis: 6, cha: 4, cr: 0.25, xp: 100 },
-    { id: 12, name: "Goblin Shaman", ac: 12, size: "medium", type: "humonoid", alignment: "choatic evil", hitPointAvg: 7, hitDice: "1d6 +2", speed: 30, str: 20, dex: 10, con: 10, int: 5, wis: 6, cha: 4, cr: 0.25, xp: 100 },
-    { id: 13, name: "Kobold", ac: 12, size: "medium", type: "humonoid", alignment: "choatic evil", hitPointAvg: 7, hitDice: "1d6 +2", speed: 30, str: 20, dex: 10, con: 10, int: 5, wis: 6, cha: 4, cr: 0.25, xp: 100 },
-    { id: 14, name: "Winged Kobold", ac: 12, size: "medium", type: "humonoid", alignment: "choatic evil", hitPointAvg: 7, hitDice: "1d6 +2", speed: 30, str: 20, dex: 10, con: 10, int: 5, wis: 6, cha: 4, cr: 0.25, xp: 100 },
-    { id: 15, name: "Kobold Sorcerer", ac: 12, size: "medium", type: "humonoid", alignment: "choatic evil", hitPointAvg: 7, hitDice: "1d6 +2", speed: 30, str: 20, dex: 10, con: 10, int: 5, wis: 6, cha: 4, cr: 0.25, xp: 100 },
-    { id: 16, name: "Kobold Inventor", ac: 12, size: "medium", type: "humonoid", alignment: "choatic evil", hitPointAvg: 7, hitDice: "1d6 +2", speed: 30, str: 20, dex: 10, con: 10, int: 5, wis: 6, cha: 4, cr: 0.25, xp: 100 },
+    { id: 11, name: "Goblin", ac: 12, size: "Medium", type: "humonoid", alignment: "choatic evil", hitPointAvg: 7, hitDice: "1d6 +2", speed: 30, str: 20, dex: 10, con: 10, int: 5, wis: 6, cha: 4, cr: 0.25, xp: 100 },
+    { id: 12, name: "Goblin Shaman", ac: 12, size: "Medium", type: "humonoid", alignment: "choatic evil", hitPointAvg: 7, hitDice: "1d6 +2", speed: 30, str: 20, dex: 10, con: 10, int: 5, wis: 6, cha: 4, cr: 0.25, xp: 100 },
+    { id: 13, name: "Kobold", ac: 12, size: "Medium", type: "humonoid", alignment: "choatic evil", hitPointAvg: 7, hitDice: "1d6 +2", speed: 30, str: 20, dex: 10, con: 10, int: 5, wis: 6, cha: 4, cr: 0.25, xp: 100 },
+    { id: 14, name: "Winged Kobold", ac: 12, size: "Medium", type: "humonoid", alignment: "choatic evil", hitPointAvg: 7, hitDice: "1d6 +2", speed: 30, str: 20, dex: 10, con: 10, int: 5, wis: 6, cha: 4, cr: 0.25, xp: 100 },
+    { id: 15, name: "Kobold Sorcerer", ac: 12, size: "Medium", type: "humonoid", alignment: "choatic evil", hitPointAvg: 7, hitDice: "1d6 +2", speed: 30, str: 20, dex: 10, con: 10, int: 5, wis: 6, cha: 4, cr: 0.25, xp: 100 },
+    { id: 16, name: "Kobold Inventor", ac: 12, size: "Medium", type: "humonoid", alignment: "choatic evil", hitPointAvg: 7, hitDice: "1d6 +2", speed: 30, str: 20, dex: 10, con: 10, int: 5, wis: 6, cha: 4, cr: 0.25, xp: 100 },
     
-    { id: 17, name: "Young Red Dragon", ac: 18, size: "large", type: "draconic", alignment: "choatic evil", hitPointAvg: 170, hitDice: "8d12 +20", speed: 30, str: 20, dex: 10, con: 10, int: 5, wis: 6, cha: 4, cr: 13,xp:3400,
+    { id: 17, name: "Young Red Dragon", ac: 18, size: "Large", type: "draconic", alignment: "choatic evil", hitPointAvg: 170, hitDice: "8d12 +20", speed: 30, str: 20, dex: 10, con: 10, int: 5, wis: 6, cha: 4, cr: 13,xp:3400,
         abilities: [
             {
                 title: "Hoarder",
