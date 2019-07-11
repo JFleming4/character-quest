@@ -41,7 +41,7 @@ export const MONSTERS: Monster[] = [
         ],
         languages: ["Draconic", "Common"],
         conditionImunities: ["Fear", "Charmed"],
-        damageImunities: ["Fire"],
+        damageImmunities: ["Fire"],
         senses: ["Darkvision 120ft", "Blindsight 60ft", "Passive Perception 17"]
     },
 ]

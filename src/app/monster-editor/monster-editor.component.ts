@@ -13,6 +13,23 @@ export class MonsterEditorComponent implements OnInit {
 
   constructor() { }
 
+  addItem(property: string)
+  {
+    if(this.monster[property])
+    {
+      this.monster[property].push("");
+    }
+    else
+    {
+      this.monster[property] = [""];
+    }
+  }
+
+  trackByFn(index: any, item:any)
+  {
+    return index;
+  }
+
   ngOnInit() {
   }
 

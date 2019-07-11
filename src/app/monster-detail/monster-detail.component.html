@@ -57,9 +57,9 @@
 			<svg height="5" width="100%" class="tapered-rule">
 	    <polyline points="0,0 400,2.5 0,5"></polyline>
 	  </svg>
-			<div *ngIf="monster.damageImunities" class="property-line first">
+			<div *ngIf="monster.damageImmunities && monster.damageImmunities.length > 0" class="property-line first">
 				<h4>Damage Immunities</h4>
-				<p> {{monster.damageImunities.join(", ")}}</p>
+				<p> {{monster.damageImmunities.join(", ")}}</p>
 			</div> <!-- property line -->
 			<div *ngIf="monster.conditionImunities" class="property-line">
 				<h4>Condition Immunities</h4>

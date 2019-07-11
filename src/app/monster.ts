@@ -21,7 +21,7 @@ export class Monster {
     cha: number;
 
     //Creature attributes
-    damageImunities?: string[];
+    damageImmunities?: string[];
     conditionImunities?: string[];
     senses?: string[];
     languages?: string [];

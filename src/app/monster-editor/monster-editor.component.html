@@ -80,9 +80,61 @@
       <mat-expansion-panel-header>
         <mat-panel-title>Attributes</mat-panel-title>
       </mat-expansion-panel-header>
-      <mat-form-field>
-          <input matInput placeholder="Title">
+      <mat-expansion-panel>
+        <mat-expansion-panel-header>
+            <mat-panel-title>Damage Immunities</mat-panel-title>
+        </mat-expansion-panel-header>
+        <button class="btn" mat-button (click)="addItem('damageImmunities')">Add Immunity</button>
+        <div class="arrayList" *ngIf="monster.damageImmunities && monster.damageImmunities.length > 0">
+          <mat-form-field *ngFor="let immunity of monster.damageImmunities; let i=index; trackBy:trackByFn">
+            <input matInput [(ngModel)]="monster.damageImmunities[i]">
+          </mat-form-field>
+        </div>
+      </mat-expansion-panel>
+      <mat-expansion-panel>
+        <mat-expansion-panel-header>
+          <mat-panel-title>Condition Immunities</mat-panel-title>
+        </mat-expansion-panel-header>
+        <button class="btn" mat-button (click)="addItem('conditionImunities')">Add Immunity</button>
+        <div class="arrayList" *ngIf="monster.conditionImunities && monster.conditionImunities.length > 0">
+          <mat-form-field *ngFor="let immunity of monster.conditionImunities; let i=index; trackBy:trackByFn">
+            <input matInput [(ngModel)]="monster.conditionImunities[i]">
+          </mat-form-field>
+        </div>
+      </mat-expansion-panel>
+      <mat-expansion-panel>
+        <mat-expansion-panel-header>
+          <mat-panel-title>Senses</mat-panel-title>
+        </mat-expansion-panel-header>
+        <button class="btn" mat-button (click)="addItem('senses')">Add Immunity</button>
+        <div class="arrayList" *ngIf="monster.senses && monster.senses.length > 0">
+          <mat-form-field *ngFor="let immunity of monster.senses; let i=index; trackBy:trackByFn">
+            <input matInput [(ngModel)]="monster.senses[i]">
+          </mat-form-field>
+        </div>
+      </mat-expansion-panel>
+      <mat-expansion-panel>
+        <mat-expansion-panel-header>
+          <mat-panel-title>Languages</mat-panel-title>
+        </mat-expansion-panel-header>
+        <button class="btn" mat-button (click)="addItem('languages')">Add Immunity</button>
+        <div class="arrayList" *ngIf="monster.languages && monster.languages.length > 0">
+          <mat-form-field *ngFor="let immunity of monster.languages; let i=index; trackBy:trackByFn">
+            <input matInput [(ngModel)]="monster.languages[i]">
+          </mat-form-field>
+        </div>
+      </mat-expansion-panel>
+      <mat-expansion-panel>
+        <mat-expansion-panel-header>
+          <mat-panel-title>Challenge</mat-panel-title>
+        </mat-expansion-panel-header>
+        <mat-form-field>
+          <input matInput [(ngModel)]="monster.cr" placeholder="Challenge Rating"type="number">
         </mat-form-field>
+        <mat-form-field>
+          <input matInput [(ngModel)]="monster.xp" placeholder="Experience Points" type="number">
+        </mat-form-field>
+      </mat-expansion-panel>
     </mat-expansion-panel>
 
     <mat-expansion-panel>
