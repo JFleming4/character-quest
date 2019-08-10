@@ -25,6 +25,14 @@ export class MonsterEditorComponent implements OnInit {
     }
   }
 
+  removeItem(property:string, index: number)
+  {
+    if(this.monster[property] && this.monster[property][index])
+    {
+      (<Array<any>>this.monster[property]).splice(index, 1);
+    }
+  }
+
   trackByFn(index: any, item:any)
   {
     return index;

@@ -87,7 +87,10 @@
         <button class="btn" mat-button (click)="addItem('damageImmunities')">Add Immunity</button>
         <div class="arrayList" *ngIf="monster.damageImmunities && monster.damageImmunities.length > 0">
           <mat-form-field *ngFor="let immunity of monster.damageImmunities; let i=index; trackBy:trackByFn">
-            <input matInput [(ngModel)]="monster.damageImmunities[i]">
+              <div class="arrayItem">
+                <button class="btn" mat-button (click)="removeItem('damageImmunities',i)">Remove</button>
+                <input matInput [(ngModel)]="monster.damageImmunities[i]">
+              </div>
           </mat-form-field>
         </div>
       </mat-expansion-panel>
@@ -98,7 +101,10 @@
         <button class="btn" mat-button (click)="addItem('conditionImunities')">Add Immunity</button>
         <div class="arrayList" *ngIf="monster.conditionImunities && monster.conditionImunities.length > 0">
           <mat-form-field *ngFor="let immunity of monster.conditionImunities; let i=index; trackBy:trackByFn">
-            <input matInput [(ngModel)]="monster.conditionImunities[i]">
+              <div class="arrayItem">
+                <input matInput [(ngModel)]="monster.conditionImunities[i]">
+                <button class="btn" mat-button (click)="removeItem('conditionImunities',i)">Remove</button>
+              </div>
           </mat-form-field>
         </div>
       </mat-expansion-panel>
@@ -106,10 +112,13 @@
         <mat-expansion-panel-header>
           <mat-panel-title>Senses</mat-panel-title>
         </mat-expansion-panel-header>
-        <button class="btn" mat-button (click)="addItem('senses')">Add Immunity</button>
+        <button class="btn" mat-button (click)="addItem('senses')">Add Sense</button>
         <div class="arrayList" *ngIf="monster.senses && monster.senses.length > 0">
-          <mat-form-field *ngFor="let immunity of monster.senses; let i=index; trackBy:trackByFn">
-            <input matInput [(ngModel)]="monster.senses[i]">
+          <mat-form-field *ngFor="let sense of monster.senses; let i=index; trackBy:trackByFn">
+            <div class="arrayItem">
+              <input matInput [(ngModel)]="monster.senses[i]">
+              <button class="btn" mat-button (click)="removeItem('senses',i)">Remove</button>
+            </div>
           </mat-form-field>
         </div>
       </mat-expansion-panel>
@@ -117,10 +126,13 @@
         <mat-expansion-panel-header>
           <mat-panel-title>Languages</mat-panel-title>
         </mat-expansion-panel-header>
-        <button class="btn" mat-button (click)="addItem('languages')">Add Immunity</button>
+        <button class="btn" mat-button (click)="addItem('languages')">Add Language</button>
         <div class="arrayList" *ngIf="monster.languages && monster.languages.length > 0">
-          <mat-form-field *ngFor="let immunity of monster.languages; let i=index; trackBy:trackByFn">
-            <input matInput [(ngModel)]="monster.languages[i]">
+          <mat-form-field *ngFor="let language of monster.languages; let i=index; trackBy:trackByFn">
+            <div class="arrayItem">
+              <input matInput [(ngModel)]="monster.languages[i]">
+              <button class="btn" mat-button (click)="removeItem('languages',i)">Remove</button>
+            </div>
           </mat-form-field>
         </div>
       </mat-expansion-panel>
@@ -141,27 +153,54 @@
       <mat-expansion-panel-header>
         <mat-panel-title>Abilities</mat-panel-title>
       </mat-expansion-panel-header>
-      <mat-form-field>
-          <input matInput placeholder="Title">
-        </mat-form-field>
+      <button class="btn" mat-button (click)="addItem('abilities')">Add Language</button>
+      <div class = "arrayList" *ngIf="monster.abilities && monster.abilities.length > 0">
+        <div *ngFor="let ability of monster.abilities; let i=index; trackBy:trackByFn">
+          <mat-form-field>
+              <input matInput placeholder="Title" [(ngModel)]="monster.abilities[i].title">
+          </mat-form-field>
+          <mat-form-field>
+            <textarea matInput placeholder="Description" [(ngModel)]="monster.abilities[i].description"></textarea>
+          </mat-form-field>
+          <button class="btn" mat-button (click)="removeItem('abilities',i)">Remove</button>
+        </div>
+      </div>
     </mat-expansion-panel>
 
     <mat-expansion-panel>
       <mat-expansion-panel-header>
         <mat-panel-title>Actions</mat-panel-title>
       </mat-expansion-panel-header>
-      <mat-form-field>
-          <input matInput placeholder="Title">
-        </mat-form-field>
+      <button class="btn" mat-button (click)="addItem('actions')">Add Language</button>
+      <div class = "arrayList" *ngIf="monster.actions && monster.actions.length > 0">
+        <div *ngFor="let ability of monster.actions; let i=index; trackBy:trackByFn">
+          <mat-form-field>
+              <input matInput placeholder="Title" [(ngModel)]="monster.actions[i].title">
+          </mat-form-field>
+          <mat-form-field>
+            <textarea matInput placeholder="Description" [(ngModel)]="monster.actions[i].description"></textarea>
+          </mat-form-field>
+          <button class="btn" mat-button (click)="removeItem('actions',i)">Remove</button>
+        </div>
+      </div>
     </mat-expansion-panel>
 
     <mat-expansion-panel>
       <mat-expansion-panel-header>
         <mat-panel-title>Legendary Actions</mat-panel-title>
       </mat-expansion-panel-header>
-      <mat-form-field>
-          <input matInput placeholder="Title">
-        </mat-form-field>
+      <button class="btn" mat-button (click)="addItem('legendaryActions')">Add Language</button>
+      <div class = "arrayList" *ngIf="monster.legendaryActions && monster.legendaryActions.length > 0">
+        <div *ngFor="let ability of monster.legendaryActions; let i=index; trackBy:trackByFn">
+          <mat-form-field>
+              <input matInput placeholder="Title" [(ngModel)]="monster.legendaryActions[i].title">
+          </mat-form-field>
+          <mat-form-field>
+            <textarea matInput placeholder="Description" [(ngModel)]="monster.legendaryActions[i].description"></textarea>
+          </mat-form-field>
+          <button class="btn" mat-button (click)="removeItem('legendaryActions',i)">Remove</button>
+        </div>
+      </div>
     </mat-expansion-panel>
 
   </mat-accordion>
