@@ -25,6 +25,18 @@ export class MonsterEditorComponent implements OnInit {
     }
   }
 
+  addObject(property: string)
+  {
+    if(this.monster[property])
+    {
+      this.monster[property].push({});
+    }
+    else
+    {
+      this.monster[property] = [{}];
+    }
+  }
+
   removeItem(property:string, index: number)
   {
     if(this.monster[property] && this.monster[property][index])

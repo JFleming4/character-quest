@@ -57,9 +57,21 @@
 			<svg height="5" width="100%" class="tapered-rule">
 	    <polyline points="0,0 400,2.5 0,5"></polyline>
 	  </svg>
-			<div *ngIf="monster.damageImmunities && monster.damageImmunities.length > 0" class="property-line first">
+			<div *ngIf="monster.savingThrows && monster.savingThrows.length > 0" class="property-line first">
+				<h4>Skills</h4>
+				<p> {{monster.savingThrows.join(", ")}}</p>
+			</div> <!-- property line -->
+			<div *ngIf="monster.skills && monster.skills.length > 0" class="property-line first">
+				<h4>Skills</h4>
+				<p> {{monster.skills.join(", ")}}</p>
+			</div> <!-- property line -->
+			<div *ngIf="monster.damageImmunities && monster.damageImmunities.length > 0" class="property-line">
 				<h4>Damage Immunities</h4>
 				<p> {{monster.damageImmunities.join(", ")}}</p>
+			</div> <!-- property line -->
+			<div *ngIf="monster.damageResistances && monster.damageResistances.length > 0" class="property-line">
+				<h4>Damage Resistances</h4>
+				<p> {{monster.damageResistances.join(", ")}}</p>
 			</div> <!-- property line -->
 			<div *ngIf="monster.conditionImunities" class="property-line">
 				<h4>Condition Immunities</h4>
