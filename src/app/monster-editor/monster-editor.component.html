@@ -229,6 +229,24 @@
 
     <mat-expansion-panel>
       <mat-expansion-panel-header>
+        <mat-panel-title>Reactions</mat-panel-title>
+      </mat-expansion-panel-header>
+      <button class="btn" mat-button (click)="addObject('reactions')">Add Action</button>
+      <div class = "arrayList" *ngIf="monster.reactions && monster.reactions.length > 0">
+        <div *ngFor="let ability of monster.reactions; let i=index; trackBy:trackByFn">
+          <mat-form-field>
+              <input matInput placeholder="Title" [(ngModel)]="monster.reactions[i].title">
+          </mat-form-field>
+          <mat-form-field>
+            <textarea matInput placeholder="Description" [(ngModel)]="monster.reactions[i].description"></textarea>
+          </mat-form-field>
+          <button class="btn" mat-button (click)="removeItem('reactions',i)">Remove</button>
+        </div>
+      </div>
+    </mat-expansion-panel>
+
+    <mat-expansion-panel>
+      <mat-expansion-panel-header>
         <mat-panel-title>Legendary Actions</mat-panel-title>
       </mat-expansion-panel-header>
       <button class="btn" mat-button (click)="addObject('legendaryActions')">Add Legendary Action</button>

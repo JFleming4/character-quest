@@ -105,6 +105,13 @@
 				<h4>{{action.title}}</h4>
 				<p>{{action.description}}</p>
 			</div> <!-- property block -->
+		</div> <!-- reactions -->
+		<div *ngIf="monster.reactions" class="reactions">
+			<h3>Reactions</h3>
+			<div *ngFor="let reaction of monster.reactions" class="property-block">
+				<h4>{{reaction.title}}</h4>
+				<p>{{reaction.description}}</p>
+			</div> <!-- property block -->
 		</div> <!-- actions -->
 		<div *ngIf="monster.legendaryActions"class="actions">
 			<h3>Legendary Actions</h3>

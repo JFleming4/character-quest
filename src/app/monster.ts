@@ -37,6 +37,9 @@ export class Monster {
     // Actions
     actions?: IStatAbility[];
 
+    // Reactions
+    reactions?: IStatAbility[];
+
     //Legendary Actions
     legendaryActions?: IStatAbility[];
 
